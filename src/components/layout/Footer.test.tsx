@@ -1,12 +1,19 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import { Footer } from "./Footer";
 
-// Mock next/link
 vi.mock("next/link", () => ({
   default: ({ children, href, ...props }: { children: React.ReactNode; href: string }) => (
     <a href={href} {...props}>{children}</a>
   ),
+}));
+
+vi.mock("next/image", () => ({
+  default: ({ alt, ...props }: { alt: string }) => <img alt={alt} {...props} />,
+}));
+
+vi.mock("next-themes", () => ({
+  useTheme: () => ({ theme: "light", resolvedTheme: "light", setTheme: () => {} }),
 }));
 
 describe("Footer", () => {
@@ -19,22 +26,26 @@ describe("Footer", () => {
     render(<Footer />);
     expect(screen.getByText("Practice")).toBeInTheDocument();
     expect(screen.getByText("Support")).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /our approach/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /contact/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /how i work/i })).toBeInTheDocument();
+    expect(screen.getAllByRole("link", { name: /talk to me/i }).length).toBeGreaterThanOrEqual(1);
     expect(screen.getByRole("link", { name: /faq/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /privacy policy/i })).toBeInTheDocument();
   });
 
-  it('renders copyright text with "ManoSthir Psychology"', () => {
+  it("does not render a Careers link", () => {
     render(<Footer />);
-    expect(screen.getByText(/ManoSthir Psychology/)).toBeInTheDocument();
-    expect(screen.getByText(/2024/)).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /careers/i })).not.toBeInTheDocument();
   });
 
-  it("renders social links", () => {
+  it("renders copyright text", () => {
+    render(<Footer />);
+    expect(screen.getByText(/All rights reserved/i)).toBeInTheDocument();
+  });
+
+  it("renders Instagram and WhatsApp social links, not Twitter", () => {
     render(<Footer />);
     expect(screen.getByRole("link", { name: /instagram/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /linkedin/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /twitter/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /whatsapp/i })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: /twitter/i })).not.toBeInTheDocument();
   });
 });

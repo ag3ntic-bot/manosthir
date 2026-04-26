@@ -14,6 +14,7 @@ export interface Specialty {
   icon: string;
   focusAreas: string[];
   linkText: string;
+  emotionalHook?: string;
 }
 
 export interface Testimonial {

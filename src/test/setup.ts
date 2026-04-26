@@ -43,9 +43,16 @@ vi.mock("framer-motion", () => {
       h1: createMotionComponent("h1"),
       h2: createMotionComponent("h2"),
       h3: createMotionComponent("h3"),
+      svg: createMotionComponent("svg"),
+      g: createMotionComponent("g"),
+      circle: createMotionComponent("circle"),
+      ellipse: createMotionComponent("ellipse"),
+      path: createMotionComponent("path"),
+      rect: createMotionComponent("rect"),
     },
     AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
     useInView: () => true,
+    useReducedMotion: () => false,
   };
 });
 

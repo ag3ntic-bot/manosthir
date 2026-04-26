@@ -1,5 +1,8 @@
 import type { NavLink, FooterColumn } from "@/types";
 
+export const WHATSAPP_URL = "https://wa.me/91XXXXXXXXXX";
+export const INSTAGRAM_URL = "https://instagram.com/mano.sthir";
+
 export const navLinks: NavLink[] = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
@@ -10,30 +13,27 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Practice",
     links: [
-      { label: "Our Approach", href: "/about" },
-      { label: "Therapists", href: "/about" },
-      { label: "Locations", href: "/about" },
-      { label: "Careers", href: "/about" },
+      { label: "How I Work", href: "/about" },
+      { label: "Services", href: "/services" },
+      { label: "Book a Session", href: "/booking" },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Contact", href: "/booking" },
+      { label: "Talk to Me", href: WHATSAPP_URL },
       { label: "FAQ", href: "/#faq" },
-      { label: "Insurance", href: "/services" },
       { label: "Privacy Policy", href: "/privacy" },
     ],
   },
 ];
 
 export const footerTagline =
-  "Compassionate psychological support for the modern life.";
+  "A safe space to understand your mind, heal, and move forward.";
 
-export const copyright = "\u00A9 2024 ManoSthir Psychology. All rights reserved.";
+export const copyright = "\u00A9 2026 ManoSthir. All rights reserved.";
 
 export const socialLinks = [
-  { platform: "Instagram", href: "https://instagram.com/manosthir", icon: "instagram" },
-  { platform: "LinkedIn", href: "https://www.linkedin.com/in/moumita-bhowmick-584baa2b4/", icon: "linkedin" },
-  { platform: "Twitter", href: "https://twitter.com/manosthir", icon: "twitter" },
+  { platform: "Instagram", href: INSTAGRAM_URL, icon: "instagram" },
+  { platform: "WhatsApp", href: WHATSAPP_URL, icon: "whatsapp" },
 ];

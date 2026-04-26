@@ -25,6 +25,7 @@ interface ServiceCardProps {
   focusAreas: string[];
   icon: string;
   linkText: string;
+  emotionalHook?: string;
 }
 
 export function ServiceCard({
@@ -33,15 +34,21 @@ export function ServiceCard({
   focusAreas,
   icon,
   linkText,
+  emotionalHook,
 }: ServiceCardProps) {
   return (
     <Card className="flex flex-col h-full" data-testid="service-card">
       <div className="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center mb-5">
         {iconMap[icon] || <Brain className="w-6 h-6 text-primary" />}
       </div>
-      <h3 className="text-xl font-bold text-text-primary mb-3 font-[family-name:var(--font-body)]">
+      <h3 className="text-xl font-bold text-text-primary mb-2 font-[family-name:var(--font-body)]">
         {title}
       </h3>
+      {emotionalHook && (
+        <p className="text-sm italic text-accent mb-3 font-[family-name:var(--font-body)]">
+          {emotionalHook}
+        </p>
+      )}
       <p className="text-sm text-text-secondary leading-relaxed mb-4 font-[family-name:var(--font-body)]">
         {description}
       </p>

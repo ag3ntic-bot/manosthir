@@ -9,6 +9,10 @@ vi.mock("next/link", () => ({
   ),
 }));
 
+vi.mock("next/image", () => ({
+  default: ({ alt, ...props }: { alt: string }) => <img alt={alt} {...props} />,
+}));
+
 describe("Navbar", () => {
   it("renders ManoSthir logo text", () => {
     render(<Navbar />);

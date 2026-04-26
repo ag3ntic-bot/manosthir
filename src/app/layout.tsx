@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -30,14 +31,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfairDisplay.variable} ${dmSans.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-white focus:text-primary">Skip to content</a>
-        <Navbar />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <ThemeProvider>
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-bg-secondary focus:text-primary">Skip to content</a>
+          <Navbar />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

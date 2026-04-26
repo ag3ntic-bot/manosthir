@@ -42,7 +42,7 @@ export function Input({
         value={value}
         onChange={onChange}
         required={required}
-        className={`w-full px-4 py-3 border border-border rounded-[8px] text-text-primary bg-white placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200 font-[family-name:var(--font-body)] ${
+        className={`w-full px-4 py-3 border border-border rounded-[8px] text-text-primary bg-bg-secondary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-colors duration-200 font-[family-name:var(--font-body)] ${
           error ? "border-error ring-1 ring-error" : ""
         }`}
       />

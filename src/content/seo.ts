@@ -1,28 +1,28 @@
 export const seoMetadata = {
   homepage: {
-    title: "ManoSthir | Online Therapy & Counseling in India | CBT Therapist",
+    title: "ManoSthir | Online Therapy with Moumita Bhowmick | LGBTQ+ Affirming",
     description:
-      "Professional online therapy tailored to your journey. Dr. Moumita Bhowmick offers culturally sensitive CBT, anxiety counseling, couples therapy, and more. Book a free consultation today.",
+      "A safe space to understand your mind, heal, and move forward. Person-centered, LGBTQ+ affirming online therapy with Moumita Bhowmick, Counseling Psychologist. Individual sessions from \u20B9699.",
   },
   about: {
-    title: "About Dr. Moumita Bhowmick | ManoSthir Psychology",
+    title: "About Moumita Bhowmick | ManoSthir",
     description:
-      "Meet Dr. Moumita Bhowmick, Cognitive Behavioral Therapist and founder of ManoSthir. Evidence-based, culturally sensitive therapy bridging Indian values and global therapeutic standards.",
+      "Meet Moumita Bhowmick, Counseling Psychologist. Person-centered, LGBTQ+ affirming, empathy-led therapy for anxiety, burnout, breakups, and more \u2014 online, across India and beyond.",
   },
   services: {
-    title: "Therapy Services | Anxiety, Depression, Couples & Family Counseling | ManoSthir",
+    title: "Therapy Services | Individual, Couple & Family Counseling | ManoSthir",
     description:
-      "Explore ManoSthir's therapeutic services: anxiety & panic, depression support, relationship counseling, trauma & PTSD, burnout, and adolescent therapy. Online sessions available worldwide.",
+      "Individual therapy (\u20B9699 \u00B7 50 min), couple counseling (\u20B91,400 \u00B7 60 min), and family therapy (\u20B92,800 \u00B7 60 min). Student discount available. Online across India.",
   },
   resources: {
-    title: "Mental Health Resources & Blog | ManoSthir Psychology",
+    title: "Mental Health Resources & Reflections | ManoSthir",
     description:
-      "Curated articles on anxiety, relationships, family dynamics, work-life balance, and self-care. Expert insights from ManoSthir's counseling psychologists.",
+      "Honest, gentle reflections on anxiety, relationships, burnout, and self-worth. Thoughtful writing from a person-centered, affirming lens.",
   },
   booking: {
-    title: "Book a Session | Online Therapy Appointment | ManoSthir",
+    title: "Book a Session | Online Therapy with Moumita Bhowmick | ManoSthir",
     description:
-      "Reserve your therapy session with Dr. Moumita Bhowmick. Individual therapy from \u20B92,500, couples counseling, and family therapy. Secure, HIPAA-compliant online sessions in IST.",
+      "Book your first online therapy session with Moumita Bhowmick. Individual \u20B9699, Couple \u20B91,400, Family \u20B92,800. Student discount (10%) available. Private, secure, affirming.",
   },
 };
 

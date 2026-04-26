@@ -1,110 +1,123 @@
 import type { Specialty, Testimonial, FAQItem } from "@/types";
 
 export const heroContent = {
-  overline: "Online Therapy Worldwide",
-  headline: "A safe space for your mind to",
-  highlightedText: "heal and grow.",
+  overline: "Online Therapy \u00B7 India & Worldwide",
+  headline: "A safe space to understand your mind, heal, and",
+  highlightedText: "move forward.",
   description:
-    "Professional global online therapy tailored to your unique journey of healing, self-discovery, and personal transformation.",
-  primaryCTA: { label: "Book a Consultation", href: "/booking" },
-  secondaryCTA: { label: "Learn More", href: "/about" },
+    "If you\u2019re feeling overwhelmed, stuck, or emotionally drained \u2014 you don\u2019t have to carry it alone. Therapy is a space to slow down, be heard, and find your way forward.",
+  identityLine: [
+    "Person-centered",
+    "LGBTQ+ affirming",
+    "Empathy-led",
+    "Evidence-based",
+  ],
+  primaryCTA: { label: "Start Your First Session", href: "/booking" },
+  secondaryCTA: { label: "Talk to Me", href: "/booking" },
 };
 
 export const introSection = {
   heading: "Guided by empathy, grounded in science.",
   description:
-    "My approach integrates modern psychological science with deep cultural empathy. As a Cognitive Behavioral Therapist, I combine evidence-based practices with a culturally sensitive approach to help you navigate life\u2019s complexities.",
+    "I primarily use a person-centered approach \u2014 which means I meet you where you are, without a script and without judgment. Your pace leads our work, whether you\u2019re navigating anxiety, a difficult chapter, or simply trying to understand yourself better.",
   credentials: [
-    "Cognitive Behavioral Therapist",
     "Counseling Psychologist",
-    "Holistic Methodology",
+    "Person-centered & evidence-based",
+    "LGBTQ+ affirming space",
   ],
-  counselorName: "Dr. Moumita Bhowmick",
-  counselorTitle: "Cognitive Behavioral Therapist",
+  counselorName: "Moumita Bhowmick",
+  counselorTitle: "Counseling Psychologist",
+  tagline: "Starting therapy can feel scary. It\u2019s okay to take your time.",
 };
 
 export const specializations = {
-  heading: "Our Specializations",
+  heading: "What I Help With",
   subtitle:
-    "Discover the support for your specific mental health needs on your personal growth path.",
+    "Whatever you\u2019re carrying, you don\u2019t have to carry it alone. Here are some of the things we can work on together.",
   items: [
     {
       id: "anxiety-panic",
       title: "Anxiety & Panic",
+      emotionalHook: "When your mind won\u2019t stop racing\u2026",
       description:
-        "Overcome intrusive thoughts and physical symptoms using CBT and mindfulness techniques to help you regain a sense of calm and control over daily life.",
+        "Work through intrusive thoughts and physical symptoms using gentle, evidence-based techniques so you can feel calm and in control again.",
       icon: "brain",
-      focusAreas: ["Emotional Resilience", "Coping Strategies", "Panic Management"],
+      focusAreas: ["Overthinking", "Panic & worry", "Nervous system regulation"],
       linkText: "Learn More",
     },
     {
       id: "depression-support",
       title: "Depression Support",
+      emotionalHook: "When everything feels heavy and far away\u2026",
       description:
-        "Work through feelings of persistent sadness, fatigue, and loss of motivation. Therapy helps identify underlying patterns and builds pathways to joy.",
+        "Move through persistent sadness, fatigue, and loss of motivation \u2014 at your own pace \u2014 toward moments of lightness and meaning.",
       icon: "heart",
-      focusAreas: ["Mood Regulation", "Behavioral Activation", "Personal Growth"],
+      focusAreas: ["Low mood", "Motivation", "Self-compassion"],
       linkText: "Learn More",
     },
     {
       id: "relationship-counseling",
-      title: "Relationship Counseling",
+      title: "Relationships & Breakups",
+      emotionalHook: "When love starts feeling like loneliness\u2026",
       description:
-        "Build healthier connections and resolve long-standing conflicts in a neutral space for couples and individuals.",
+        "Untangle long-standing conflict, heal after a breakup, and rebuild healthier ways of connecting \u2014 with partners, family, or yourself.",
       icon: "users",
-      focusAreas: ["Conflict Resolution", "Secure Attachment", "Effective Dialogue"],
+      focusAreas: ["Breakup healing", "Conflict", "Communication"],
       linkText: "Learn More",
     },
     {
       id: "trauma-ptsd",
-      title: "Trauma & PTSD",
+      title: "Trauma & Difficult Memories",
+      emotionalHook: "When the past keeps showing up in the present\u2026",
       description:
-        "Specialized trauma-informed care using evidence-based practices like EMDR to help process difficult memories and find a path toward recovery.",
+        "A safe, steady space to process difficult experiences \u2014 at the pace your nervous system can handle \u2014 so they stop running your life.",
       icon: "shield",
-      focusAreas: ["Safe Processing", "Somatic Regulation", "Empowerment"],
+      focusAreas: ["Safe processing", "Grounding", "Rebuilding safety"],
       linkText: "Learn More",
     },
     {
       id: "burnout-work-stress",
-      title: "Burnout & Work Stress",
+      title: "Stress & Burnout",
+      emotionalHook: "When rest doesn\u2019t feel restful anymore\u2026",
       description:
-        "Manage the pressures of high-stakes careers. Learn boundaries, restore balance, and align your work with your personal values.",
+        "Understand what\u2019s underneath the exhaustion, learn to set boundaries that actually hold, and rebuild a relationship with rest.",
       icon: "briefcase",
-      focusAreas: ["Boundary Setting", "Time Management", "Value Alignment"],
+      focusAreas: ["Burnout recovery", "Boundaries", "Work-life alignment"],
       linkText: "Learn More",
     },
     {
       id: "adolescent-therapy",
-      title: "Adolescent Therapy",
+      title: "Young Adult Therapy (18\u201330)",
+      emotionalHook: "When being in your 20s feels harder than anyone admits\u2026",
       description:
-        "Helping teens navigate identity, social pressure, and academic stress in a supportive, non-judgmental space for younger clients.",
+        "Make sense of identity, relationships, career confusion, and the pressure to have it all figured out \u2014 in a space that doesn\u2019t judge.",
       icon: "sparkles",
-      focusAreas: ["Identity Formation", "Social Skills", "Emotion Regulation"],
+      focusAreas: ["Identity", "Career confusion", "Self-esteem"],
       linkText: "Learn More",
     },
   ] satisfies Specialty[],
 };
 
 export const journeySteps = {
-  heading: "The Journey Together",
+  heading: "How We\u2019ll Begin",
   steps: [
     {
       step: 1,
-      title: "Book a Consultation",
+      title: "Reach out",
       description:
-        "Schedule a brief 15-minute discovery call to share your concerns and see if we are a good fit for each other.",
+        "Send a message or book a first session. No long forms, no pressure \u2014 just a starting point.",
     },
     {
       step: 2,
-      title: "Meet Your Therapist",
+      title: "A short first conversation",
       description:
-        "Complete your initial assessment from the comfort of your home via a secure online video session.",
+        "We\u2019ll start with a short conversation to understand what you\u2019re going through and what kind of support feels right.",
     },
     {
       step: 3,
-      title: "Begin Your Healing",
+      title: "Go at your pace",
       description:
-        "Start regular sessions tailored to your pace and therapeutic goals for lasting, meaningful change.",
+        "Regular online sessions, shaped around your life. We move as slowly or as deeply as you need.",
     },
   ],
 };
@@ -114,14 +127,14 @@ export const testimonials = {
     {
       id: "testimonial-1",
       quote:
-        "The online format made it so easy to attend to my mental health despite my travel schedule. My therapist truly understood the cultural context behind my stress and helped me develop practical strategies that fit my life.",
+        "For the first time, I didn\u2019t feel like I had to perform being okay. Moumita gave me space to actually fall apart \u2014 and then slowly, she helped me put myself back together.",
       authorName: "Anonymous Client",
       authorTitle: "Verified Patient",
     },
     {
       id: "testimonial-2",
       quote:
-        "The culturally sensitive approach made all the difference. I finally found someone who understands the unique pressures of balancing traditional values with modern life.",
+        "I came in feeling broken and ashamed. I left every session feeling a little more human. She truly listens \u2014 without judgement, without rushing.",
       authorName: "Anonymous Client",
       authorTitle: "Verified Patient",
     },
@@ -129,47 +142,47 @@ export const testimonials = {
 };
 
 export const faqItems = {
-  heading: "Common Questions about Online Therapy in India",
+  heading: "Things People Often Wonder",
   subtitle:
-    "Everything you need to know about starting your mental health journey.",
+    "A few honest answers to the questions that usually come up before starting therapy.",
   items: [
     {
       id: "faq-1",
-      question: "Is online therapy as effective as in-person?",
+      question: "I\u2019ve never done therapy before. Is that okay?",
       answer:
-        "Yes, extensive research shows that online therapy is equally effective as in-person sessions for most concerns, including anxiety, depression, and relationship issues. Our secure video platform allows for the same depth of connection, with the added convenience of attending from wherever you feel most comfortable.",
+        "Absolutely. Most people starting therapy have never done it before. There\u2019s nothing you need to prepare. We\u2019ll begin with a short conversation so I can understand what you\u2019re going through \u2014 and you can see if this feels like the right space for you.",
     },
     {
       id: "faq-2",
-      question: "What are the technical requirements for a session?",
+      question: "Is online therapy actually effective?",
       answer:
-        "You need a stable internet connection, a device with a camera and microphone (smartphone, tablet, or laptop), and a quiet, private space. We use a HIPAA-compliant video platform that works directly in your browser\u2014no special software required.",
+        "Yes. Research consistently shows online therapy is as effective as in-person sessions for most concerns, including anxiety, depression, and relationships. You get the same depth of support \u2014 from wherever you feel most comfortable.",
     },
     {
       id: "faq-3",
-      question: "How is my privacy and confidentiality protected?",
+      question: "Is this space LGBTQ+ affirming?",
       answer:
-        "Your privacy is our highest priority. All sessions are conducted over encrypted, HIPAA-compliant channels. Your records are securely stored and never shared without your explicit written consent. We adhere to the strictest professional and legal standards of confidentiality.",
+        "Yes, completely. Whoever you are, whoever you love, whatever you\u2019re working through \u2014 you are welcome here. I work from a person-centered, affirming lens, which means I follow your lead, not a script.",
     },
     {
       id: "faq-4",
-      question: "Do you offer sessions in languages other than English?",
+      question: "What if I don\u2019t know what I want to work on?",
       answer:
-        "Yes, Dr. Moumita Bhowmick is fluent in English, Hindi, Bengali, and Odia. We believe therapy is most effective when you can express yourself in the language you are most comfortable with, and we encourage clients to choose their preferred language.",
+        "That\u2019s okay \u2014 and very common. Not knowing is often exactly where therapy starts. We\u2019ll figure it out together, gently, without pressure.",
     },
     {
       id: "faq-5",
-      question: "How do I make payments from within India?",
+      question: "Is everything I share confidential?",
       answer:
-        "We accept all major Indian payment methods including UPI, net banking, debit and credit cards, and popular wallets. All prices are listed in INR. For international clients, we also accept international card payments. Invoices and receipts are provided after each session.",
+        "Yes. Our sessions are private and held over a secure, encrypted video platform. Nothing is shared without your explicit consent, in line with professional and ethical confidentiality standards.",
     },
   ] satisfies FAQItem[],
 };
 
 export const ctaBanner = {
-  heading: "Take the first step toward emotional wellbeing.",
+  heading: "Whenever you\u2019re ready \u2014 I\u2019m here.",
   description:
-    "Begin your journey toward mental clarity and personal growth with compassionate, culturally sensitive support.",
-  primaryCTA: { label: "Book a Consultation", href: "/booking" },
-  secondaryCTA: { label: "Learn More", href: "/about" },
+    "Starting therapy can feel scary. It\u2019s okay to take your time. When you\u2019re ready, we\u2019ll begin with a short conversation.",
+  primaryCTA: { label: "Start Your First Session", href: "/booking" },
+  secondaryCTA: { label: "Talk to Me", href: "/booking" },
 };

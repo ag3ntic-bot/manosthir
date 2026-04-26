@@ -1,73 +1,83 @@
 export const heroContent = {
-  overline: "Our Journey",
-  headline: "Human connection is the",
-  highlightedText: "heart of healing.",
+  overline: "About Moumita",
+  headline: "A safe space to understand your mind,",
+  highlightedText: "heal, and move forward.",
   description:
-    "Founded by Moumita Bhowmick, ManoSthir was born from a vision to provide culturally sensitive, evidence-based psychological support. We bridge the gap between deep-rooted Indian values and global therapeutic standards, offering a sanctuary for healing and self-discovery.",
+    "I\u2019m Moumita Bhowmick, a Counseling Psychologist. I work with people who are feeling overwhelmed, stuck, or emotionally drained \u2014 and I help them find their way back to themselves, gently and at their own pace.",
+  tagline: "Starting therapy can feel scary. It\u2019s okay to take your time.",
+};
+
+export const personalIntro = {
+  heading: "How I work",
+  paragraphs: [
+    "I primarily use a person-centered approach \u2014 which means I meet you where you are, without a script and without judgment. Your pace leads our work.",
+    "I provide an inclusive and LGBTQ+ affirming space. Whoever you are, whoever you love, whatever you\u2019re working through \u2014 you are welcome here.",
+    "I understand how overwhelming things can feel sometimes. You don\u2019t need to arrive with the right words or a clear plan. We can start wherever you are.",
+  ],
 };
 
 export const philosophy = {
-  heading: "Therapeutic Philosophy",
+  heading: "What guides my practice",
   subtitle:
-    "ManoSthir believes in a holistic, Person-Centered Therapy approach that combines empathy with evidence to help you discover the best version of yourself.",
+    "A holistic, person-centered approach that leads with empathy and is grounded in evidence.",
   pillars: [
     {
       title: "Unconditional Regard",
       description:
-        "Creating a non-judgmental space where you can express your true self freely. We believe acceptance is the first step toward meaningful change.",
+        "A non-judgmental space to show up exactly as you are \u2014 messy, uncertain, complicated, all of it. Acceptance is where real change starts.",
       icon: "heart",
     },
     {
       title: "Evidence-Based",
       description:
-        "Leading with heart, backed by the latest in clinical psychology and neurological research to provide effective, proven tools for lasting change.",
+        "Warm, human, and grounded in clinical psychology. The tools we use are proven, but the relationship always comes first.",
       icon: "clipboard",
     },
     {
-      title: "Cultural Sensitivity",
+      title: "Inclusive & Affirming",
       description:
-        "Navigating the complexities of modern life while respecting traditional roots, making therapy relevant for both local and global perspectives.",
+        "LGBTQ+ affirming, culturally sensitive, and welcoming of every background, identity, and story. You don\u2019t have to explain or defend who you are here.",
       icon: "globe",
     },
   ],
 };
 
 export const holisticApproach = {
-  heading: "A Holistic Approach to",
-  highlightedText: "Person-Centered Care",
+  heading: "A gentle, honest approach to",
+  highlightedText: "being human.",
   items: [
     {
-      title: "Individualized Mapping",
+      title: "Your story, your pace",
       description:
-        "Every journey is unique. Therapeutic interventions tailored to your specific life context, challenges, and aspirations.",
+        "Every journey is different. Our work is shaped around your life, your context, and what you actually need \u2014 not a one-size-fits-all plan.",
       icon: "map",
     },
     {
-      title: "Empowerment & Agency",
+      title: "You lead, I walk alongside",
       description:
-        "Working collaboratively to help you reclaim your narrative and develop the resilience needed to face life\u2019s transitions.",
+        "Therapy isn\u2019t about being told what to do. It\u2019s about reclaiming your own voice and trusting it again.",
       icon: "zap",
     },
     {
-      title: "Sustainable Growth",
+      title: "Real, lasting change",
       description:
-        "Not just treating symptoms; we explore root causes to ensure changes are lasting and truly transformative.",
+        "We don\u2019t just manage symptoms. We gently explore what\u2019s underneath, so the changes you make are ones that actually hold.",
       icon: "trending-up",
     },
   ],
 };
 
 export const bookSection = {
-  title: "Human Touch",
-  author: "Dr. Moumita Bhowmick",
+  title: "Qualifications",
+  author: "Moumita Bhowmick",
   description:
-    "A deeply personal exploration of human connection in modern therapeutic practice, drawing from years of clinical experience and cultural insight.",
+    "Counseling Psychologist with specialised training in person-centered therapy, LGBTQ+ affirming care, and evidence-based approaches for anxiety, depression, and relational healing. Every session is held with warmth, ethics, and deep respect for your story.",
 };
 
 export const ctaBanner = {
-  heading: "Ready to begin your journey?",
+  heading: "Whenever you\u2019re ready \u2014 I\u2019m here.",
   description:
-    "We offer a complimentary 15-minute consultation to learn if our approach is the right fit for your needs.",
-  primaryCTA: { label: "Schedule Consultation", href: "/booking" },
-  secondaryCTA: { label: "Meet Our Team", href: "/services" },
+    "Starting therapy can feel scary. It\u2019s okay to take your time. When you\u2019re ready, we\u2019ll begin with a short conversation.",
+  primaryCTA: { label: "Start Your First Session", href: "/booking" },
+  secondaryCTA: { label: "Talk to Me", href: "/booking" },
 };

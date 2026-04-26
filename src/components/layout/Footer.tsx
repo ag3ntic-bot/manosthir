@@ -2,18 +2,19 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import {
   footerColumns,
   footerTagline,
   copyright,
   socialLinks,
 } from "@/content/navigation";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 const socialIconMap: Record<string, React.ReactNode> = {
   instagram: <Instagram className="w-5 h-5" />,
-  linkedin: <Linkedin className="w-5 h-5" />,
-  twitter: <Twitter className="w-5 h-5" />,
+  whatsapp: <MessageCircle className="w-5 h-5" />,
 };
 
 export function Footer() {
@@ -25,13 +26,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo + tagline */}
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-white text-sm font-bold">M</span>
-              </div>
-              <span className="text-xl font-bold font-[family-name:var(--font-heading)]">
-                ManoSthir
-              </span>
+            <Link href="/" className="flex items-center mb-4 text-white" aria-label="ManoSthir home">
+              <BrandMark variant="light" />
             </Link>
             <p className="text-sm text-gray-300 leading-relaxed font-[family-name:var(--font-body)]">
               {footerTagline}
@@ -90,7 +86,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Social icons */}
+        {/* Social icons + theme toggle */}
         <div className="flex items-center gap-4 mt-10 pt-8 border-t border-white/10">
           {socialLinks.map((social) => (
             <a
@@ -104,6 +100,8 @@ export function Footer() {
               {socialIconMap[social.icon]}
             </a>
           ))}
+          <span aria-hidden="true" className="w-px h-5 bg-white/10 mx-1" />
+          <ThemeToggle />
         </div>
 
         {/* Copyright */}

@@ -10,6 +10,8 @@ interface HeroProps {
   headline: string;
   highlightedText?: string;
   description: string;
+  identityLine?: string[];
+  tagline?: string;
   primaryCta?: { text: string; href: string; ariaLabel?: string };
   secondaryCta?: { text: string; href: string; ariaLabel?: string };
   imageSlot?: React.ReactNode;
@@ -22,6 +24,8 @@ export function Hero({
   headline,
   highlightedText,
   description,
+  identityLine,
+  tagline,
   primaryCta,
   secondaryCta,
   imageSlot,
@@ -54,9 +58,31 @@ export function Hero({
                   <>{" "}<span className="italic text-accent font-[family-name:var(--font-heading)]">{highlightedText}</span></>
                 )}
               </h1>
-              <p className="text-base md:text-lg text-text-secondary leading-relaxed mb-8 font-[family-name:var(--font-body)] max-w-xl">
+              <p className={`text-base md:text-lg text-text-secondary leading-relaxed mb-6 font-[family-name:var(--font-body)] max-w-xl ${isCenter ? "mx-auto" : ""}`}>
                 {description}
               </p>
+              {identityLine && identityLine.length > 0 && (
+                <p
+                  className={`text-xs md:text-sm font-medium uppercase tracking-[1.5px] text-primary mb-6 font-[family-name:var(--font-body)] ${
+                    isCenter ? "" : "max-w-xl"
+                  }`}
+                  data-testid="hero-identity-line"
+                >
+                  {identityLine.map((item, i) => (
+                    <span key={item}>
+                      {item}
+                      {i < identityLine.length - 1 && (
+                        <span className="mx-2 md:mx-3 text-primary/40" aria-hidden="true">|</span>
+                      )}
+                    </span>
+                  ))}
+                </p>
+              )}
+              {tagline && (
+                <p className="italic text-sm md:text-base text-text-tertiary mb-6 font-[family-name:var(--font-body)] max-w-xl">
+                  {tagline}
+                </p>
+              )}
               {(primaryCta || secondaryCta) && (
                 <div className={`flex flex-wrap gap-4 ${isCenter ? "justify-center" : ""}`}>
                   {primaryCta && (

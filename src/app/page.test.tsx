@@ -1,72 +1,67 @@
 import { render, screen } from "@testing-library/react";
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi } from "vitest";
 import HomePage from "./page";
 
-// Mock next/link
 vi.mock("next/link", () => ({
   default: ({ children, href, ...props }: { children: React.ReactNode; href: string }) => (
     <a href={href} {...props}>{children}</a>
   ),
 }));
 
-// Mock next/image
 vi.mock("next/image", () => ({
   default: ({ alt, ...props }: { alt: string }) => <img alt={alt} {...props} />,
 }));
 
 describe("HomePage", () => {
-  it('renders hero with "A safe space for your mind"', () => {
+  it("renders hero with new v3 headline", () => {
     render(<HomePage />);
-    expect(screen.getByText(/A safe space for your mind/)).toBeInTheDocument();
+    expect(
+      screen.getByText(/A safe space to understand your mind, heal, and/)
+    ).toBeInTheDocument();
   });
 
-  it('renders "heal and grow" highlighted text', () => {
+  it('renders "move forward" highlighted text', () => {
     render(<HomePage />);
-    expect(screen.getByText(/heal and grow/)).toBeInTheDocument();
+    expect(screen.getByText(/move forward/)).toBeInTheDocument();
+  });
+
+  it("renders the identity line badges", () => {
+    render(<HomePage />);
+    expect(screen.getByTestId("hero-identity-line")).toHaveTextContent("Person-centered");
+    expect(screen.getByTestId("hero-identity-line")).toHaveTextContent("LGBTQ+ affirming");
+    expect(screen.getByTestId("hero-identity-line")).toHaveTextContent("Empathy-led");
+    expect(screen.getByTestId("hero-identity-line")).toHaveTextContent("Evidence-based");
   });
 
   it("shows specializations section with 6 items", () => {
     render(<HomePage />);
-    expect(screen.getByText(/Our Specializations/)).toBeInTheDocument();
+    expect(screen.getByText(/What I Help With/)).toBeInTheDocument();
     const specializations = [
       "Anxiety & Panic",
       "Depression Support",
-      "Relationship Counseling",
-      "Trauma & PTSD",
-      "Burnout & Work Stress",
-      "Adolescent Therapy",
+      "Relationships & Breakups",
+      "Trauma & Difficult Memories",
+      "Stress & Burnout",
+      "Young Adult Therapy (18\u201330)",
     ];
     specializations.forEach((spec) => {
       expect(screen.getByText(spec)).toBeInTheDocument();
     });
   });
 
-  it("shows journey steps (3 steps)", () => {
+  it("shows emotional hook on at least one specialization card", () => {
     render(<HomePage />);
-    expect(screen.getByText(/The Journey Together/)).toBeInTheDocument();
-    expect(screen.getAllByText("Book a Consultation").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getByText("Meet Your Therapist")).toBeInTheDocument();
-    expect(screen.getByText("Begin Your Healing")).toBeInTheDocument();
+    expect(screen.getByText(/When your mind won\u2019t stop racing/)).toBeInTheDocument();
   });
 
-  it("shows testimonials", () => {
+  it("shows how-we-begin steps (3 steps)", () => {
     render(<HomePage />);
-    // At least one testimonial quote should be visible
-    expect(screen.getByText(/online format/i)).toBeInTheDocument();
+    expect(screen.getByText(/How We\u2019ll Begin/)).toBeInTheDocument();
+    expect(screen.getByText(/A short first conversation/i)).toBeInTheDocument();
   });
 
-  it("shows FAQ section with 5 questions", () => {
+  it("shows primary CTA with new label", () => {
     render(<HomePage />);
-    expect(screen.getByText(/Common Questions about Online Therapy/)).toBeInTheDocument();
-    expect(screen.getByText(/Is online therapy as effective as in-person/)).toBeInTheDocument();
-    expect(screen.getByText(/What are the technical requirements/)).toBeInTheDocument();
-    expect(screen.getByText(/How is my privacy and confidentiality protected/)).toBeInTheDocument();
-    expect(screen.getByText(/Do you offer sessions in languages other than English/)).toBeInTheDocument();
-    expect(screen.getByText(/How do I make payments from within India/)).toBeInTheDocument();
-  });
-
-  it("shows CTA banner", () => {
-    render(<HomePage />);
-    expect(screen.getByText(/Take the first step toward emotional wellbeing/)).toBeInTheDocument();
+    expect(screen.getAllByText(/Start Your First Session/i).length).toBeGreaterThanOrEqual(1);
   });
 });

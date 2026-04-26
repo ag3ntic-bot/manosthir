@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/content/navigation";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,19 +21,14 @@ export function Navbar() {
   return (
     <nav
       data-testid="navbar"
-      className={`sticky top-0 z-50 bg-white transition-shadow duration-200 ${
+      className={`sticky top-0 z-50 bg-bg-secondary transition-shadow duration-200 ${
         scrolled ? "shadow-navbar" : ""
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-5 md:px-10 lg:px-20 flex items-center justify-between h-16 md:h-[72px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-white text-sm font-bold">M</span>
-          </div>
-          <span className="text-xl font-bold font-[family-name:var(--font-heading)] text-text-primary">
-            ManoSthir
-          </span>
+        <Link href="/" className="flex items-center text-text-primary" aria-label="ManoSthir home">
+          <BrandMark variant="color" priority />
         </Link>
 
         {/* Desktop Nav */}
@@ -74,7 +70,7 @@ export function Navbar() {
 
       {/* Mobile drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-border-light px-5 pb-6 pt-4">
+        <div className="md:hidden bg-bg-secondary border-t border-border-light px-5 pb-6 pt-4">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link

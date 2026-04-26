@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CounselorPhoto } from "@/components/ui/CounselorPhoto";
 import { Hero } from "@/components/sections/Hero";
 import { CTABanner } from "@/components/sections/CTABanner";
 import { Card } from "@/components/ui/Card";
@@ -14,6 +15,7 @@ import {
 } from "lucide-react";
 import {
   heroContent,
+  personalIntro,
   philosophy,
   holisticApproach,
   bookSection,
@@ -47,19 +49,41 @@ export default function AboutPage() {
         headline={heroContent.headline}
         highlightedText={heroContent.highlightedText}
         description={heroContent.description}
+        tagline={heroContent.tagline}
         imageSlot={
-          <div
-            className="w-64 h-80 md:w-80 md:h-96 rounded-[20px] bg-gradient-to-br from-accent-light to-primary-light flex items-center justify-center"
-            role="img"
-            aria-label="Dr. Moumita Bhowmick portrait"
-
-          >
-            <span className="text-6xl font-bold text-primary/30 font-[family-name:var(--font-heading)]">
-              MB
-            </span>
+          <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-[20px] overflow-hidden shadow-card bg-primary-light">
+            <CounselorPhoto
+              alt="Moumita Bhowmick, Counseling Psychologist"
+              fill
+              priority
+              sizes="(min-width: 768px) 320px, 256px"
+            />
           </div>
         }
       />
+
+      {/* Personal Intro (How I work) */}
+      <section className="py-16 md:py-24">
+        <Container>
+          <MotionWrapper>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-8 font-[family-name:var(--font-heading)]">
+                {personalIntro.heading}
+              </h2>
+              <div className="space-y-6">
+                {personalIntro.paragraphs.map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-lg text-text-secondary leading-relaxed font-[family-name:var(--font-body)]"
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </MotionWrapper>
+        </Container>
+      </section>
 
       {/* Therapeutic Philosophy */}
       <section className="py-16 md:py-24 bg-bg-secondary">
@@ -70,7 +94,7 @@ export default function AboutPage() {
                 {philosophy.heading}
               </h2>
               <p className="text-text-secondary max-w-2xl mx-auto font-[family-name:var(--font-body)]">
-                {philosophy.subtitle.replace("Person-Centered Therapy", "person-centered therapy")}
+                {philosophy.subtitle}
               </p>
             </div>
           </MotionWrapper>
@@ -98,25 +122,18 @@ export default function AboutPage() {
       <section className="py-16 md:py-24">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Book placeholder */}
+            {/* Qualifications card */}
             <MotionWrapper>
               <div className="max-w-sm mx-auto">
-                <div
-                  className="aspect-[3/4] rounded-[16px] bg-gradient-to-br from-green-100 to-emerald-100 flex flex-col items-center justify-center p-8 shadow-card"
-                  role="img"
-                  aria-label="Human Touch book cover by Dr. Moumita Bhowmick"
-
-                >
-                  <div className="w-20 h-20 mb-4 opacity-30">
-                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                      <path d="M40 10C30 20 20 30 20 45C20 55 28 65 40 65C52 65 60 55 60 45C60 30 50 20 40 10Z" stroke="#2EC4B6" strokeWidth="2"/>
-                    </svg>
-                  </div>
-                  <p className="text-lg font-bold text-text-primary font-[family-name:var(--font-heading)] italic">
+                <div className="aspect-[3/4] rounded-[16px] bg-gradient-to-br from-primary-light to-accent-light flex flex-col items-center justify-center p-8 shadow-card text-center">
+                  <p className="text-sm uppercase tracking-[2px] text-primary font-semibold mb-3 font-[family-name:var(--font-body)]">
                     {bookSection.title}
                   </p>
-                  <p className="text-sm text-text-secondary mt-2 font-[family-name:var(--font-body)]">
+                  <p className="text-2xl font-bold text-text-primary font-[family-name:var(--font-heading)]">
                     {bookSection.author}
+                  </p>
+                  <p className="text-sm text-text-secondary mt-2 font-[family-name:var(--font-body)]">
+                    Counseling Psychologist
                   </p>
                 </div>
                 <p className="text-sm text-text-secondary mt-4 leading-relaxed font-[family-name:var(--font-body)]">

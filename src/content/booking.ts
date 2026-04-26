@@ -1,10 +1,10 @@
 import type { SessionType, TimeSlot } from "@/types";
 
 export const heroContent = {
-  breadcrumb: "Home > GMT+05:30 (India Standard Time)",
-  heading: "Reserve Your Space",
+  breadcrumb: "Home \u00B7 GMT+05:30 (India Standard Time)",
+  heading: "Let\u2019s begin \u2014 gently.",
   description:
-    "Begin your journey toward mental clarity. Select the session type that best fits your needs today.",
+    "We\u2019ll start with a short conversation to understand what you\u2019re going through. No pressure, no pre-judgement \u2014 just space to begin.",
 };
 
 export const sessionTypes: SessionType[] = [
@@ -12,27 +12,30 @@ export const sessionTypes: SessionType[] = [
     id: "individual",
     name: "Individual Therapy",
     duration: "50 Minutes",
-    price: 2500,
-    description: "One-on-one",
+    price: 699,
+    description: "Online \u00B7 One-on-one",
     icon: "user",
   },
   {
     id: "couple",
     name: "Couple Counseling",
-    duration: "80 Minutes",
-    price: 4000,
-    description: "Partner session",
+    duration: "60 Minutes",
+    price: 1400,
+    description: "Online \u00B7 Together",
     icon: "users",
   },
   {
     id: "family",
     name: "Family Therapy",
-    duration: "90 Minutes",
-    price: 4500,
-    description: "Support system",
+    duration: "60 Minutes",
+    price: 2800,
+    description: "Online \u00B7 Whole family",
     icon: "home",
   },
 ];
+
+export const studentDiscountNote =
+  "Student discount available (10%) \u2014 just mention it at booking.";
 
 export const timeSlots: TimeSlot[] = [
   { id: "slot-1", time: "09:00 AM", available: true },
@@ -43,14 +46,14 @@ export const timeSlots: TimeSlot[] = [
 ];
 
 export const assignedProfessional = {
-  name: "Dr. Moumita Bhowmick",
-  title: "Cognitive Behavioral Therapist",
+  name: "Moumita Bhowmick",
+  title: "Counseling Psychologist",
   rating: 4.9,
-  reviews: "120+ reviews",
+  reviews: "Person-centered \u00B7 LGBTQ+ affirming",
 };
 
 export const trustBadges = [
-  { icon: "shield-check", label: "HIPAA Compliant" },
-  { icon: "lock", label: "Encrypted Data" },
-  { icon: "badge-check", label: "Licensed Therapists" },
+  { icon: "shield-check", label: "Confidential & Private" },
+  { icon: "lock", label: "Encrypted Sessions" },
+  { icon: "badge-check", label: "Licensed Psychologist" },
 ];

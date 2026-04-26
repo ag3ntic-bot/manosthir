@@ -75,7 +75,7 @@ describe("Accessibility", () => {
     it("text on dark backgrounds uses light text color", () => {
       // CTA banner should use white text on dark background
       render(<HomePage />);
-      const ctaSection = screen.getByText(/Take the first step toward emotional wellbeing/);
+      const ctaSection = screen.getByText(/Whenever you\u2019re ready \u2014 I\u2019m here\./);
       // The parent should have dark background and text should be white
       expect(ctaSection).toBeInTheDocument();
       expect(ctaSection).toHaveClass("text-white");

@@ -10,19 +10,24 @@ describe("BookingForm", () => {
     expect(screen.getByText(/Family Therapy/)).toBeInTheDocument();
   });
 
-  it("renders Individual Therapy at \u20B92,500", () => {
+  it("renders Individual Therapy at \u20B9699", () => {
     render(<BookingForm />);
-    expect(screen.getByText(/\u20B92,500/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B9699/)).toBeInTheDocument();
   });
 
-  it("renders Couple Counseling at \u20B94,000", () => {
+  it("renders Couple Counseling at \u20B91,400", () => {
     render(<BookingForm />);
-    expect(screen.getByText(/\u20B94,000/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B91,400/)).toBeInTheDocument();
   });
 
-  it("renders Family Therapy at \u20B94,500", () => {
+  it("renders Family Therapy at \u20B92,800", () => {
     render(<BookingForm />);
-    expect(screen.getByText(/\u20B94,500/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B92,800/)).toBeInTheDocument();
+  });
+
+  it("shows student discount note", () => {
+    render(<BookingForm />);
+    expect(screen.getByText(/Student discount available/i)).toBeInTheDocument();
   });
 
   it("shows calendar component", () => {
@@ -43,8 +48,8 @@ describe("BookingForm", () => {
 
   it("displays trust badges", () => {
     render(<BookingForm />);
-    expect(screen.getByText(/HIPAA Compliant/)).toBeInTheDocument();
-    expect(screen.getByText(/Encrypted Data/)).toBeInTheDocument();
-    expect(screen.getByText(/Licensed Therapists/)).toBeInTheDocument();
+    expect(screen.getByText(/Confidential & Private/)).toBeInTheDocument();
+    expect(screen.getByText(/Encrypted Sessions/)).toBeInTheDocument();
+    expect(screen.getByText(/Licensed Psychologist/)).toBeInTheDocument();
   });
 });

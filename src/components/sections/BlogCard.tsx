@@ -28,7 +28,7 @@ export function BlogCard({
   return (
     <article
       data-testid="blog-card"
-      className="bg-white border border-border rounded-[12px] overflow-hidden shadow-card hover:shadow-cardHover transition-shadow duration-300"
+      className="bg-bg-secondary border border-border rounded-[12px] overflow-hidden shadow-card hover:shadow-cardHover transition-shadow duration-300"
     >
       {/* Image placeholder */}
       <div

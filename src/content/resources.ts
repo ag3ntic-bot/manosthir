@@ -7,7 +7,7 @@ export const featuredArticle: BlogPost = {
     "Learn how to reclaim your focus and cultivate inner peace in an increasingly noisy world. Our lead psychologist shares practical strategies for digital wellness.",
   category: "Self-Care",
   readTime: "12 min read",
-  authorName: "Dr. Moumita Bhowmick",
+  authorName: "Moumita Bhowmick",
   authorRole: "Counseling Psychologist",
   imageGradient: "from-teal-800 to-emerald-900",
   featured: true,

@@ -15,19 +15,19 @@ vi.mock("next/image", () => ({
 }));
 
 describe("BookingPage", () => {
-  it('renders "Reserve Your Space" heading', () => {
+  it("renders the warm booking heading", () => {
     render(<BookingPage />);
-    expect(screen.getByText(/Reserve Your Space/)).toBeInTheDocument();
+    expect(screen.getByText(/Let\u2019s begin/i)).toBeInTheDocument();
   });
 
   it("shows 3 session types with INR prices", () => {
     render(<BookingPage />);
     expect(screen.getByText(/Individual Therapy/)).toBeInTheDocument();
-    expect(screen.getByText(/\u20B92,500/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B9699/)).toBeInTheDocument();
     expect(screen.getByText(/Couple Counseling/)).toBeInTheDocument();
-    expect(screen.getByText(/\u20B94,000/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B91,400/)).toBeInTheDocument();
     expect(screen.getByText(/Family Therapy/)).toBeInTheDocument();
-    expect(screen.getByText(/\u20B94,500/)).toBeInTheDocument();
+    expect(screen.getByText(/\u20B92,800/)).toBeInTheDocument();
   });
 
   it("shows calendar", () => {

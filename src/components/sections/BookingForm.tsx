@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { CounselorPhoto } from "@/components/ui/CounselorPhoto";
 import {
   User,
   Users,
@@ -10,13 +11,14 @@ import {
   ShieldCheck,
   Lock,
   BadgeCheck,
-  Star,
+  Sparkles,
 } from "lucide-react";
 import {
   sessionTypes,
   timeSlots,
   assignedProfessional,
   trustBadges,
+  studentDiscountNote,
 } from "@/content/booking";
 
 const sessionIconMap: Record<string, React.ReactNode> = {
@@ -148,19 +150,26 @@ export function BookingForm() {
             </div>
           </fieldset>
 
+          {/* Student discount */}
+          <div className="mt-4 flex items-start gap-2 p-3 rounded-[10px] bg-accent-light/50 border border-accent/30">
+            <Sparkles className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+            <p className="text-xs text-text-secondary leading-relaxed font-[family-name:var(--font-body)]">
+              {studentDiscountNote}
+            </p>
+          </div>
+
           {/* Assigned Professional */}
           <div className="mt-6 p-4 bg-bg-tertiary rounded-[12px]">
             <p className="text-xs font-semibold uppercase tracking-wider text-text-tertiary mb-3 font-[family-name:var(--font-body)]">
-              Assigned Professional
+              Your therapist
             </p>
             <div className="flex items-center gap-3">
-              <div
-                className="w-12 h-12 rounded-full bg-primary-light flex items-center justify-center text-primary text-sm font-bold"
-                role="img"
-                aria-label="Dr. Moumita Bhowmick avatar"
-
-              >
-                MB
+              <div className="relative w-12 h-12 rounded-full overflow-hidden bg-primary-light flex-shrink-0">
+                <CounselorPhoto
+                  alt={`${assignedProfessional.name} avatar`}
+                  fill
+                  sizes="48px"
+                />
               </div>
               <div>
                 <p className="font-semibold text-sm text-text-primary font-[family-name:var(--font-body)]">
@@ -169,19 +178,16 @@ export function BookingForm() {
                 <p className="text-xs text-text-tertiary font-[family-name:var(--font-body)]">
                   {assignedProfessional.title}
                 </p>
-                <div className="flex items-center gap-1 mt-1">
-                  <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-                  <span className="text-xs text-text-secondary font-[family-name:var(--font-body)]">
-                    {assignedProfessional.rating} ({assignedProfessional.reviews})
-                  </span>
-                </div>
+                <p className="text-xs text-primary font-medium mt-1 font-[family-name:var(--font-body)]">
+                  {assignedProfessional.reviews}
+                </p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Calendar */}
-        <div data-testid="booking-calendar" className="bg-white border border-border rounded-[12px] p-6">
+        <div data-testid="booking-calendar" className="bg-bg-secondary border border-border rounded-[12px] p-6">
           <h3 className="flex items-center gap-2 text-sm font-semibold text-text-primary mb-4 font-[family-name:var(--font-body)]">
             <span className="w-6 h-6 rounded-full bg-primary text-white text-xs flex items-center justify-center">
               2
@@ -272,7 +278,7 @@ export function BookingForm() {
       </div>
 
       {/* Summary bar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between bg-white border border-border rounded-[12px] p-4 mb-6">
+      <div className="flex flex-col sm:flex-row items-center justify-between bg-bg-secondary border border-border rounded-[12px] p-4 mb-6">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-text-tertiary font-[family-name:var(--font-body)]">
             Total Summary

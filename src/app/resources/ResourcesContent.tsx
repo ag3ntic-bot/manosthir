@@ -49,7 +49,7 @@ export default function ResourcesContent() {
                   id="resources-search"
                   type="text"
                   placeholder="Search mental health topics..."
-                  className="w-full pl-10 pr-4 py-3 border border-border rounded-[8px] text-sm text-text-primary bg-white placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary font-[family-name:var(--font-body)]"
+                  className="w-full pl-10 pr-4 py-3 border border-border rounded-[8px] text-sm text-text-primary bg-bg-secondary placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-primary font-[family-name:var(--font-body)]"
                 />
               </div>
               {/* Category filters */}
