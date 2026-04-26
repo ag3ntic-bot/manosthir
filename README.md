@@ -8,25 +8,6 @@ ManoSthir is a professional online counseling platform founded by Dr. Moumita Bh
 
 ---
 
-## Design
-
-### Homepage
-![Homepage](docs/designs/screenshots/homepage.png)
-
-### About
-![About](docs/designs/screenshots/about.png)
-
-### Services
-![Services](docs/designs/screenshots/services.png)
-
-### Resources
-![Resources](docs/designs/screenshots/resources.png)
-
-### Booking
-![Booking](docs/designs/screenshots/booking.png)
-
----
-
 ## Tech Stack
 
 | Layer | Technology |
